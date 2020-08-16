@@ -1,5 +1,6 @@
-# SIMULATIONS OF D2D COMMUNICATION IN 5G NB-IOT: PERFORMANCE ANALYSIS OF PATH 
-# ATTENUATION, DUTY-CYCLE, AND RETRANSMISSIONS
+# Work in progress: Readme.md
+
+# SIMULATIONS OF D2D COMMUNICATION IN 5G NB-IOT: PERFORMANCE ANALYSIS OF PATH ATTENUATION, DUTY-CYCLE, AND RETRANSMISSIONS
 
 _IoT aims to provide communication support to an ever-increasing number of devices. Narrowband IoT(NB-IoT) emerged as part of 5G technology focused on sensors and devices deployed almost anywhere. This technology is constantly challenged to improve its coverage, number of connected devices and minimize devices’s battery use. One strategy to extend the NB-IoT’s range is using device-to-device (D2D) communications. Our article presents an analysis of three key parameters in cellular and D2D communications: path attenuation, duty-cycle, and the maximum number of retransmissions. We use 
 the expected delivery ratio (EDR) to compare the performance of each configuration using a NB-IoT/D2D integrated simulation tool. The results reveals path-loss exponent and maximum retransmission upper limits in typical urban and suburban scenarios. We expect to shed light on the future designs of NB-IoT infrastructure and its integration with D2D._
@@ -28,7 +29,7 @@ To install simulator in GNU/Linux follow the next steps:
 
 1. Install GCC (GNU Compiler Collection), version 7.4.0+
     - Note: to install in Ubuntu 18.04+, type in the console ```sudo apt-get update``` and then ```sudo apt-get install build-essential```
-2. Download simulator code from [here](https://github.com/LSC-UBA/OpenEP/archive/master.zip "OpenEP code"), and uncompress the zip file.
+2. Download simulator code from [here](https://github.com/LICAR-UBA/NBIoT-D2D-Sim/archive/master.zip "NBIoT-D2D-Sim code"), and uncompress the zip file.
 3. Download and install Paraview following the instructions in [here](https://www.paraview.org/download/ "Paraview").
 
 
@@ -91,37 +92,3 @@ To install simulator in GNU/Linux follow the next steps:
 3. In ```simulation-1/data/``` folder you will find vtk and/or csv output files (depending on the selected configuration in ```src/par.h```). Output formats were selected to be compatible with the powerful visualization tool: Paraview. You can find tutorials about Paraview use in [here](https://www.paraview.org/tutorials/ "Paraview Tutorials").
   
   
-# More about the software...
-
-## run.sh options
-
-| run.sh option | Description |
-|---------------|---------------|
-| -d <simulation-directory> | Define the simulation directory. Default: simulation-i, where i is the next number regarding to the previous simulation directory. |
-| -n <number-of-threads> | Define the number of threads that will be used by the simulation. Default: number of logical cores of the computer node. |
-| -c <compilation-option> | Define the compilation option (see Tab. B.4). Default: FAST OMP. |
-
-| Compilation option | Description |
-|---------------|---------------|
-| STD | Standard compilation. |
-| O3 | Compilation with O3 optimizations. |
-| FAST | Compilation with Ofast optimizations. |
-| DBG | Compilation with debug mode. |
-| OMP | Compilation with OpenMP. |
-| O3 OMP | Compilation with O3 optimizations and OpenMP. |
-| FAST OMP | Compilation with Ofast optimizations and OpenMP. |
-
-## Code file descriptions
-
-| Source file |  Description  |
-|---------------|---------------|
-| main.cpp  |  Main simulation process is implemented in this file. | 
-| electrics_calc.h, electrics_calc.cpp |  All electric variables (Phi, **E**, sigma, **j**, i, Q) are calculated in these files. Only Phi requires the solution of an equation system. | 
-| temp_calc.h, temp_calc.cpp |  Temperature transient solution is solved in these files. | 
-| par.h |  Biological, physical and numerical paramenters are declared and/or initialized in this file. | 
-| mesh.h, mesh.cpp |   Mesh class keeps information about geometry and domain discretization. Instances of this class are used in the ScalarField class and VectorField class. | 
-| scalar_field.h, scalar_field.cpp |   ScalarField class is defined in these files. Instances of this class are used in main.cpp, electrics_calc.h, temp_calc.h for depicting  Phi, |**E**|, |**j**| and sigma. | 
-| vector_field.h, vector_field.cpp |   VectorField class is defined in these files. Instances of this class are used in main.cpp, electrics_calc.h and temp_calc.h for depicting **E** and **j**.  | 
-| save.h, save.cpp |   Saving of the different scalar and vector fields as well as the log, are implemented in these files.| 
-
-
