@@ -47,12 +47,12 @@ To install simulator in GNU/Linux follow the next steps:
 3. In ```simulation-1/data/``` folder you will find the output files (depending on the selected configuration in ```src/parameters.h```).
 
 
-## Licence
+# Licence
 
 GNU GPL v3.
 
 
-## ACKNOWLEDGMENTS
+# Acknowledgments
 
 The authors would like to thank Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Universidad de Buenos Aires (UBA), Argentina.
   
