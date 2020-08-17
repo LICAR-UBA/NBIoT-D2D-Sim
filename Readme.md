@@ -4,7 +4,7 @@
 
 _IoT aims to provide communication support to an ever-increasing number of devices. Narrowband IoT (NB-IoT) emerged as part of 5G technology focused on sensors and devices deployed almost anywhere. This technology is constantly challenged to improve its coverage, number of connected devices and minimize devices’s battery use. One strategy to extend the NB-IoT’s range is using device-to-device (D2D) communications. 
 We present an open source simulation code for modeling NB-IoT/D2D hybrid communication systems. 
-The simulations consider key parameters in cellular and D2D communications, such as transmission power, duty-cycle, device density, path attenuation, and the number of retransmissions. 
+The simulations consider key parameters in cellular and D2D communications, such as D2D interference, transmission power, duty-cycle, device density, path attenuation, and the number of retransmissions. 
 Besides, the expected delivery ratio (EDR) and expected end-to-end delay (EED) are used to compare the performance of each study scenario.
 The code was developed for a GNU/Linux system. It was written in C, the compilation is assisted by Makefile, and the experiment setup script was written in BASH.
 We expect to shed light on the future designs of NB-IoT infrastructure and its integration with D2D._
@@ -22,6 +22,9 @@ If you like this simulator, please consider starring [link]( "https://github.com
 
 The simulator provides the following features:
 
+- It is an in-silico lab, it provides an NB-IoT simulation model integrated with D2D capabilities. 
+- It models crucial variables in cellular and D2D communications, including:
+    - D2D interference, transmission power, duty dycle, retransmissions, path loss attenuation, user equipment density, footprint radii, packet size and transfer block size,   
 - It runs in parallel in your notebook or in a computer cluster, using shared memory.
 - Is OpenSource Software! 
    
