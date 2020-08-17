@@ -1,4 +1,4 @@
-# Work in Progress: Readme.md
+# Work in Progress
 
 # An Open Source Simulator for the integration of 5G Narrowband Internet of Things and Device-to-Device Communication
 
@@ -11,8 +11,8 @@ We expect to shed light on the future designs of NB-IoT infrastructure and its i
 
 <p align="center">
 <img aling="center" src="suburban_edr_alpha.jpg" alt="Impact of PLE increment in the EDR and EED with different duty cycles in urban and suburban scenarios" width="250"/>
-<img aling="center" src="suburban_qos_medium_d05.jpg" alt="The impact of out-of-coverage UE density and the maximum number of retransmissions on EDR and EED, for suburban scenario" width="250"/>
 <img aling="center" src="urban_edr_tau.jpg" alt="Impact of maximum number of retransmissions in the EDR and EED for different duty cycles in urban scenario." width="250"/>
+<img aling="center" src="suburban_qos_medium_d05.jpg" alt="The impact of out-of-coverage UE density and the maximum number of retransmissions on EDR and EED, for suburban scenario" width="250"/>
 </p>
 
 If you like this simulator, please consider starring [link]( "https://github.com/LICAR-UBA/NBIoT-D2D-Sim") and spreading the word!
@@ -40,7 +40,7 @@ To install simulator in GNU/Linux follow the next steps:
 
 # How to setup and run your experiment
 
-1. **NBIoT-D2D-Sim** can be adapted to your specific in-silico experiment by modifiyng the configuration file *parameters.h*.
+1. **NBIoT-D2D-Sim** can be adapted to your specific in-silico experiment by modifiyng the configuration file ```src/parameters.h```.
   
 2. After modifying the configuration file (```src/parameters.h```), compilation and execution can be done effortlessly typing in the linux terminal: ```./run.sh```. The complete set of options of the bash script are described in the following section. The script will create a directory named ```simulation-1``` with three subdirectories in it: ```bin```, ```data``` and ```src```, which stores the simulation executable file, the output data and the source code of this particular simulation, respectively. Next time the script is executed the simulation directory will be named with the following natural number with regard to the last simulation, i.e. ```simulation-2```.
   
