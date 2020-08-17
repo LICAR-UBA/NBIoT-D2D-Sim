@@ -24,7 +24,7 @@ The simulator provides the following features:
 
 - It is an in-silico lab, it provides an NB-IoT simulation model integrated with D2D capabilities. 
 - It models crucial variables in cellular and D2D communications, including:
-    - D2D interference, transmission power, duty dycle, retransmissions, path loss attenuation, user equipment density, footprint radii, packet size and transfer block size,   
+    - D2D interference, transmission power, duty dycle, retransmissions, path loss attenuation, user equipment density, footprint radius, packet size and transfer block size,   
 - It runs in parallel in your notebook or in a computer cluster, using shared memory.
 - Is OpenSource Software! 
    
